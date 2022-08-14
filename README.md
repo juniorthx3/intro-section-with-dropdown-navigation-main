@@ -30,8 +30,8 @@ Below are some pictures related to the project challenge
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/juniorthx3/intro-section-with-dropdown-navigation-main](https://github.com/juniorthx3/intro-section-with-dropdown-navigation-main)
+- Live Site URL: [https://intro-section-with-dropdown-nv.herokuapp.com/](https://intro-section-with-dropdown-nv.herokuapp.com/)
 
 ## My process
 
