@@ -26,7 +26,8 @@ Users should be able to:
 ```
 Below are some pictures related to the project challenge
 ```
-![](./screenshot.jpg)
+![Project pic](project-view-desktop.PNG)
+![Project pic](project-view-mobile.PNG)
 
 ### Links
 
