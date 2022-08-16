@@ -17,7 +17,7 @@ const Header = () => {
            </div>
            <div className="space-x-6 px-6">
               <a href="/" className=" text-sm hover:text-almostBlack">Login</a>
-              <a href="/" className="bg-almostWhite p-3 text-sm rounded-xl border border-almostBlack baseline hover:bg-almostWhite hover:text-almostBlack">Register</a>
+              <a href="/" className="bg-transparent p-3 text-sm rounded-xl border border-almostBlack baseline hover:text-almostBlack">Register</a>
            </div>
         </div>
       </div>
