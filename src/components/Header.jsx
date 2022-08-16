@@ -8,11 +8,10 @@ import iconTodo from '../images/icon-todo.svg'
 import iconPlanning from '../images/icon-planning.svg'
 import iconReminders from '../images/icon-reminders.svg'
 import iconCalendar from '../images/icon-calendar.svg'
+import {Menu} from '@headlessui/react'
 
 const Header = () => {
   const [open, setOpen] = useState(false)
-  const [openSub, setOpenSub] = useState(false)
-  const [openSub2, setOpenSub2] = useState(false)
 
   return (
     <nav className='relative mx-5 p-5'>
@@ -21,33 +20,31 @@ const Header = () => {
           <Link to="/"><img src={logo} alt="" /></Link>
         </div>
         <div className="hidden w-screen md:flex items-center justify-between text-mediumGray">
-           <div className='space-x-10 text-sm'>
-              <Link to="/features" className="hover:text-almostBlack" onClick={()=>setOpenSub(!openSub)}>Features <img src={arrowDown} alt="" className="inline" />
-              {
-                openSub && (
-                  <div className='absolute top-10 bg-gray-200 flex flex-col rounded mt-3 p-3 text-sm w-32 space-y-2'>
-                    <Link to="/" className="hover:text-almostBlack"><img src={iconTodo} alt="" className="inline p-1" /> Todo List</Link>
-                    <Link to="/" className="hover:text-almostBlack"><img src={iconCalendar} alt="" className="inline p-1" /> Calendar</Link>
-                    <Link to="/" className="hover:text-almostBlack"><img src={iconReminders} alt="" className="inline p-1" /> Reminders</Link>
-                    <Link to="/" className="hover:text-almostBlack"><img src={iconPlanning} alt="" className="inline p-1" /> Planning</Link>
-                  </div>
-                )
-              }
-              </Link>
-              <Link to="/company" className="hover:text-almostBlack" onClick={()=>setOpenSub2(!openSub2)}>Company <img src={arrowDown} alt="" className="inline" />
-              {
-                openSub2 && (
-                  <div className='absolute top-10 bg-gray-200 flex flex-col rounded mt-3 p-3 text-sm w-32 space-y-2'>
-                    <Link to="/" className="hover:text-almostBlack">History</Link>
-                    <Link to="/" className="hover:text-almostBlack">Our Team</Link>
-                    <Link to="/" className="hover:text-almostBlack">Blog</Link>
-                  </div>
-                )
-              } 
-              </Link>
-              <Link to="/careers" className="hover:text-almostBlack">Careers</Link>
-              <Link to="/about" className="hover:text-almostBlack">About</Link>
-           </div>
+           <ul className='space-x-10 text-sm flex'>
+              <li>
+                  <Menu as="div" className="relative hover:text-almostBlack">
+                    <Menu.Button>Features <img src={arrowDown} alt="" className="inline" /></Menu.Button>
+                    <Menu.Items className='absolute -left-14 top-0 bg-white mt-8 w-40 p-6 flex flex-col rounded-md shadow-lg text-sm space-y-2 ring-1 ring-black ring-opacity-5'>
+                      <Link to="/todolist" className="hover:text-almostBlack"><img src={iconTodo} alt="" className="inline p-1 pr-2" /> Todo List</Link>
+                      <Link to="/calendar" className="hover:text-almostBlack"><img src={iconCalendar} alt="" className="inline p-1 pr-2" /> Calendar</Link>
+                      <Link to="/reminders" className="hover:text-almostBlack"><img src={iconReminders} alt="" className="inline p-1 pr-2" /> Reminders</Link>
+                      <Link to="/planning" className="hover:text-almostBlack"><img src={iconPlanning} alt="" className="inline p-1 pr-2" /> Planning</Link>
+                    </Menu.Items>
+                  </Menu>
+              </li>
+              <li>
+                <Menu as="div" to="/company" className="hover:text-almostBlack">
+                  <Menu.Button>Company <img src={arrowDown} alt="" className="inline" /></Menu.Button>
+                  <Menu.Items className='absolute top-8 bg-white mt-8 w-32 p-6 flex flex-col rounded-md shadow-lg text-sm space-y-2 ring-1 ring-black ring-opacity-5'>
+                    <Link to="/history" className="hover:text-almostBlack">History</Link>
+                    <Link to="/ourteam" className="hover:text-almostBlack">Our Team</Link>
+                    <Link to="/blog" className="hover:text-almostBlack">Blog</Link>
+                  </Menu.Items>
+                </Menu>
+              </li>
+              <li><Link to="/careers" className="hover:text-almostBlack">Careers</Link></li>
+              <li><Link to="/about" className="hover:text-almostBlack">About</Link></li>
+           </ul>
            <div className="space-x-6 px-6">
               <a href="/" className=" text-sm hover:text-almostBlack">Login</a>
               <a href="/" className="bg-transparent p-3 text-sm rounded-xl border border-almostBlack baseline hover:text-almostBlack">Register</a>
