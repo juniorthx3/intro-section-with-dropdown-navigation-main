@@ -7,18 +7,18 @@ import clientMaker from '../images/client-maker.svg'
 
 const Hero = () => {
   return (
-    <section className='md:mx-32'>
-        <div className="flex flex-col-reverse justify-evenly md:flex-row">
-            <div className="max-w-md flex flex-col justify-center md:w-1/2">
-                <h1 className="mt-10 text-4xl font-bold text-center md:text-6xl md:text-left md:mt-20 md:mb-8">
+    <section className='flex justify-center md:p-5'>
+        <div className="flex flex-col-reverse justify-evenly md:space-x-52 md:flex-row md:h-full">
+            <div className="flex flex-col justify-center md:max-w-md  md:w-1/2">
+                <h1 className="mt-10 text-4xl font-bold text-center md:text-6xl md:text-left md:mt-28 md:mb-8">
                     Make <span className='inline md:block'>remote work</span>
                 </h1>
                 <p className='mt-5 mx-9 flex items-center text-lg text-center text-mediumGray md:mb-10 md:text-left md:mx-0 md:mt-0'>
                     Get your team in sync, no matter your location. Streamline processes, 
                     create team rituals, and watch productivity soar.
                 </p>
-                <div className="mx-auto mt-5 md:mt-0 flex items-center md:mx-0 md:mb-20">
-                    <a href="/" className="bg-black text-almostWhite px-6 py-4 text-sm rounded-xl baseline hover:bg-almostWhite hover:border hover:border-black hover:text-black hover:font-bold">Learn more</a>
+                <div className="mx-auto mt-5 md:mt-0 flex items-center md:mx-0 md:mb-9">
+                    <a href="/" className="bg-black border border-black text-almostWhite px-9 py-4 text-sm rounded-xl baseline hover:bg-almostWhite  hover:text-black hover:font-bold">Learn more</a>
                 </div>  
                 <div className='space-x-10 mx-auto flex items-center pt-10 pb-3 md:pb-0 md:mx-0'>
                     <img src={clientDatabiz} alt="" className='h-4'/>
@@ -27,9 +27,9 @@ const Hero = () => {
                     <img src={clientMaker} alt="" className='h-5' />
                 </div>
             </div>
-            <div className="flex justify-end md:w-1/2">
-                <img src={imageHeroDesktop} alt="" className="hidden w-3/4 md:block" />
-                <img src={imageHeroMobile} alt="" className='block md:hidden' />
+            <div className="flex md:max-w-md md:w-1/2">
+                <img src={imageHeroDesktop} alt="" className="hidden max-w-full h-auto md:block " />
+                <img src={imageHeroMobile} alt="" className='block w-full md:hidden' />
             </div>
         </div>
     </section>
