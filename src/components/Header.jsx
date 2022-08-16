@@ -14,7 +14,7 @@ const Header = () => {
   const [open, setOpen] = useState(false)
 
   return (
-    <nav className='relative mx-5 p-5'>
+    <nav className='mx-5 p-5'>
       <div className="flex items-center space-x-10">
         <div className="pt-2">
           <Link to="/"><img src={logo} alt="" /></Link>
@@ -50,7 +50,7 @@ const Header = () => {
               <a href="/" className="bg-transparent p-3 text-sm rounded-xl border border-almostBlack baseline hover:text-almostBlack">Register</a>
            </div>
         </div>
-        <button id="menu-btn" onClick={()=>setOpen(!open)} className="absolute right-0 focus:outline-none md:hidden">
+        <button id="menu-btn" onClick={()=>setOpen(!open)} className="absolute right-10 focus:outline-none md:hidden">
               {
                 open ? <img src={iconClose} alt="" /> : <img src={iconMenu} alt="" />
               }
@@ -58,13 +58,16 @@ const Header = () => {
         {
           open && (
             <div className="md:hidden">
-                <div id="menu" className="text-sm absolute flex flex-col items-start px-5 self-end text-mediumGray py-8 mt-5 space-y-6 bg-almostWhite sm:w-auto sm:self-start w-1/2 h-screen left-1/2 -right-5 drop-shadow-md">
+                <div id="menu" className="h-full border absolute -top-5 right-0 text-sm  flex flex-col items-start px-5 self-end text-mediumGray py-8 mt-5 space-y-6 bg-almostWhite sm:w-auto sm:self-start w-1/2 left-1/2  drop-shadow-md">
+                <button id="menu-btn" onClick={()=>setOpen(!open)} className="absolute right-10 focus:outline-none md:hidden">
+                { open ? <img src={iconClose} alt="" /> : <img src={iconMenu} alt="" />}
+                </button> 
                     <Link to="/features" className="hover:text-almostBlack">Features <img src={arrowDown} alt="" className="inline" /></Link>
                     <Link to="/company" className="hover:text-almostBlack">Company <img src={arrowDown} alt="" className="inline" /></Link>
                     <Link to="/careers" className="hover:text-almostBlack">Careers</Link>
                     <Link to="/about" className="hover:text-almostBlack">About</Link>
                     <a href="/" className=" text-sm mx-auto hover:text-almostBlack">Login</a>
-                  <a href="/" className="bg-transparent w-full text-center mx-auto p-3 text-sm rounded-xl border border-almostBlack baseline hover:text-almostBlack">Register</a>
+                    <a href="/" className="bg-transparent w-full text-center mx-auto p-3 text-sm rounded-xl border border-almostBlack baseline hover:text-almostBlack">Register</a>
                 </div>
             </div>
           )
