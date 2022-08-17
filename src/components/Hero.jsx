@@ -7,9 +7,9 @@ import clientMaker from '../images/client-maker.svg'
 
 const Hero = () => {
   return (
-    <section className='flex justify-center md:p-5'>
+    <section className='heroSection flex justify-center md:p-5'>
         <div className="flex flex-col-reverse justify-evenly md:space-x-52 md:flex-row md:h-full">
-            <div className="flex flex-col justify-center md:max-w-md  md:w-1/2">
+            <div className="rightText flex flex-col justify-center md:max-w-md  md:w-1/2">
                 <h1 className="mt-10 text-4xl font-bold text-center md:text-6xl md:text-left md:mt-28 md:mb-8">
                     Make <span className='inline md:block'>remote work</span>
                 </h1>
@@ -27,8 +27,8 @@ const Hero = () => {
                     <img src={clientMaker} alt="" className='h-5' />
                 </div>
             </div>
-            <div className="flex md:max-w-md md:w-1/2">
-                <img src={imageHeroDesktop} alt="" className="hidden max-w-full h-auto md:block " />
+            <div className="heroImage flex md:max-w-md md:w-1/2">
+                <img src={imageHeroDesktop} alt="" className="hidden object-contain max-w-full h-auto md:block " />
                 <img src={imageHeroMobile} alt="" className='block w-full md:hidden' />
             </div>
         </div>

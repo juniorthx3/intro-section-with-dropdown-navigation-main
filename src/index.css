@@ -15,3 +15,17 @@
         font-size:18px;
     }
 }
+
+.heroSection{
+    width: min(100% - 4rem, 80em); 
+    margin-inline: auto
+}
+
+.rightText{
+    flex: 1 1 50%;
+    margin-right: min(5%, 5rem);
+}
+
+.heroImage{
+    flex: 1 1 auto;
+}
