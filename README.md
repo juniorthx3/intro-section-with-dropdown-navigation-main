@@ -26,8 +26,8 @@ Users should be able to:
 ```
 Below are some pictures related to the project challenge
 ```
-![Project pic](project-view-desktop1.PNG)
-![Project pic](project-view-mobile1.PNG)
+![Project pic](project-view-desktop.PNG)
+![Project pic](project-view-mobile.PNG)
 
 ### Links
 
