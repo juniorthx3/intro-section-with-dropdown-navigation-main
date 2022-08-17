@@ -27,8 +27,8 @@ Users should be able to:
 Below are some pictures related to the project challenge
 ```
 
-![Project Desktop View](project-desktop-view.PNG)
-![Project Mobile View](project-mobile-view.PNG)
+![Project Desktop View](./project-desktop-view.PNG)
+![Project Mobile View](./project-mobile-view.PNG)
 
 
 ### Links
