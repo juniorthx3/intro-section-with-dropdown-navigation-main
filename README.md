@@ -34,7 +34,7 @@ Below are some pictures related to the project challenge
 ### Links
 
 - Solution URL: [https://github.com/juniorthx3/intro-section-with-dropdown-navigation-main](https://github.com/juniorthx3/intro-section-with-dropdown-navigation-main)
-- Live Site URL: [https://intro-section-with-dropdown-nv.herokuapp.com/](https://intro-section-with-dropdown-nv.herokuapp.com/)
+- Live Site URL: [https://intro-section-with-dropdown-nv.netlify.app/](https://intro-section-with-dropdown-nv.netlify.app/)
 
 ## My process
 
